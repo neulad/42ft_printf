@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_percent.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/30 14:43:47 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 22:11:05 by ukireyeu         ###   ########.fr       */
+/*   Created: 2024/03/30 22:09:57 by ukireyeu          #+#    #+#             */
+/*   Updated: 2024/03/30 22:13:33 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdarg.h>
-# include <unistd.h>
+#include "ft_printf.h"
 
-int	ft_print_flag(char const *fmt, va_list args);
-int	ft_printc(va_list args);
-int	ft_prints(va_list args);
-int	ft_printp(va_list args);
-int	ft_printd(va_list args);
-int	ft_printu(va_list args);
-int	ft_print_x(va_list args);
-int	ft_print_upper_x(va_list args);
-int	ft_print_percent(void);
-
-#endif
+int	ft_print_percent()
+{
+	write(1, "%", 1);
+	return (1);
+}

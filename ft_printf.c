@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 19:58:14 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 18:17:59 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/30 22:12:05 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,18 @@ int	ft_print_flag(char const *fmt, va_list args)
 		return (ft_prints(args));
 	if (*fmt == 'p')
 		return (ft_printp(args));
-	// if (c == 'd')
-	// 	return ();
-	// if (c == 'i')
-	// 	return ();
-	// if (c == 'd')
-	// 	return ();
-	// if (c == 'i')
-	// 	return ();
-	// if (c == 'u')
-	// 	return ();
-	// if (c == 'x')
-	// 	return ();
-	// if (c == 'X')
-	// 	return ();
-	// if (c == '%')
-	// 	return ();
+	if (*fmt == 'd')
+		return (ft_printd(args));
+	if (*fmt == 'i')
+		return (ft_printd(args));
+	if (*fmt == 'u')
+		return (ft_printu(args));
+	if (*fmt == 'x')
+		return (ft_print_upper_x(args));
+	if (*fmt == 'X')
+		return (ft_print_upper_x(args));
+	if (*fmt == '%')
+		return (ft_print_percent());
 	return (-1);
 }
 
@@ -69,7 +65,8 @@ int	ft_printf(const char *fmt, ...)
 #include <stdio.h>
 int	main(void)
 {
-	int n = ft_printf("Hellitch%s\n", "");
+	int k = 12;
+	int n = ft_printf("Pointer: %X\n", 255);
 	printf("Bytes read: %d", n);
 	return (0);
 }

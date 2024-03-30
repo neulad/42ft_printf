@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printp.c                                        :+:      :+:    :+:   */
+/*   ft_print_upper_x.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/30 18:16:14 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 22:07:34 by ukireyeu         ###   ########.fr       */
+/*   Created: 2024/03/30 22:06:30 by ukireyeu          #+#    #+#             */
+/*   Updated: 2024/03/30 22:13:29 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-static int	ft_upper_x_len(unsigned long long ptr)
+static int ft_upper_x_len(unsigned long long ptr)
 {
 	int	n;
 
@@ -32,21 +32,18 @@ static void	ft_upper_x_print(unsigned long long ptr)
 	if (ptr <= 9)
 		return (ft_putchar(ptr + '0'));
 	if (ptr <= 15)
-		return (ft_putchar(ptr % 10 + 'a'));
+		return (ft_putchar(ptr % 10 + 'A'));
 	ft_upper_x_print(ptr / 16);
 	ft_upper_x_print(ptr % 16);
 }
 
-int	ft_printp(va_list args)
+int	ft_print_upper_x(va_list args)
 {
-	unsigned long long int	ptr;
-	int						len;
+	unsigned int	d;
+	int				len;
 
-	ptr = va_arg(args, unsigned long long int);
-	len = write(1, "0x", 2);
-	if (!ptr)
-		return (len + write(1, "0", 1));
-	len += ft_upper_x_len(ptr);
-	ft_upper_x_print(ptr);
+	d = va_arg(args, unsigned int);
+	len = ft_upper_x_len(d);
+	ft_upper_x_print(d);
 	return (len);
 }
