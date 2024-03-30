@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 14:43:47 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 22:11:05 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/30 22:47:31 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 # include <stdarg.h>
 # include <unistd.h>
 
+int	ft_printf(const char *fmt, ...);
 int	ft_print_flag(char const *fmt, va_list args);
 int	ft_printc(va_list args);
 int	ft_prints(va_list args);
 int	ft_printp(va_list args);
 int	ft_printd(va_list args);
 int	ft_printu(va_list args);
-int	ft_print_x(va_list args);
+int	ft_print_upper_x(va_list args);
 int	ft_print_upper_x(va_list args);
 int	ft_print_percent(void);
 

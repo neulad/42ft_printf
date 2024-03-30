@@ -6,13 +6,13 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 22:09:57 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 22:13:33 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/30 22:36:04 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_percent()
+int	ft_print_percent(void)
 {
 	write(1, "%", 1);
 	return (1);

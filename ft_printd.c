@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 20:07:26 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 21:29:47 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/30 22:54:37 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ static void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
+
 static int	ft_ulen(int d)
 {
 	int	len;
 
+	if (d == 0)
+		return (1);
 	len = 0;
 	if (d < 0)
 		len++;
@@ -31,7 +34,7 @@ static int	ft_ulen(int d)
 	return (len);
 }
 
-static void ft_d_print(int d)
+static void	ft_d_print(int d)
 {
 	if (d <= 9 && d >= 0)
 		return (ft_putchar(d + '0'));

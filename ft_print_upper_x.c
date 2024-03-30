@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 22:06:30 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 22:13:29 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/30 23:01:50 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,26 @@ static void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-static int ft_upper_x_len(unsigned long long ptr)
+static int	ft_upper_x_len(unsigned int x)
 {
 	int	n;
 
 	n = 0;
-	while (ptr && ++n)
-		ptr /= 16;
+	if (x == 0)
+		return (1);
+	while (x && ++n)
+		x /= 16;
 	return (n);
 }
 
-static void	ft_upper_x_print(unsigned long long ptr)
+static void	ft_upper_x_print(unsigned int x)
 {
-	if (ptr <= 9)
-		return (ft_putchar(ptr + '0'));
-	if (ptr <= 15)
-		return (ft_putchar(ptr % 10 + 'A'));
-	ft_upper_x_print(ptr / 16);
-	ft_upper_x_print(ptr % 16);
+	if (x <= 9)
+		return (ft_putchar(x + '0'));
+	if (x <= 15)
+		return (ft_putchar(x % 10 + 'A'));
+	ft_upper_x_print(x / 16);
+	ft_upper_x_print(x % 16);
 }
 
 int	ft_print_upper_x(va_list args)

@@ -6,13 +6,13 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 16:33:19 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 18:10:59 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/30 22:35:10 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printc(va_list args)
+int	ft_printc(va_list args)
 {
 	int	c;
 
