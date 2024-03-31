@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 19:58:14 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 23:03:17 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/31 15:46:33 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_print_flag(char const *fmt, va_list args)
 	if (*fmt == 'u')
 		return (ft_printu(args));
 	if (*fmt == 'x')
-		return (ft_print_upper_x(args));
+		return (ft_print_x(args));
 	if (*fmt == 'X')
 		return (ft_print_upper_x(args));
 	if (*fmt == '%')
@@ -61,12 +61,11 @@ int	ft_printf(const char *fmt, ...)
 	}
 	return (len);
 }
-
 /* #include <stdio.h>
 int	main(void)
 {
 	int k = 12;
-	int n = ft_printf("Pointer: %u\n", 0);
+	int n = printf("%i\n", 2147483649);
 	printf("Bytes read: %d", n);
 	return (0);
 } */

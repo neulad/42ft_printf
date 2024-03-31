@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 18:16:14 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 22:29:27 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/31 14:26:42 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_printp(va_list args)
 	int						len;
 
 	ptr = va_arg(args, unsigned long long int);
+	if (!ptr)
+		return (write(1, "(nil)", 5));
 	len = write(1, "0x", 2);
 	if (!ptr)
 		return (len + write(1, "0", 1));

@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 17:16:22 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 18:10:47 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/31 15:33:39 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ int	ft_prints(va_list args)
 	int		n;
 
 	cs = va_arg(args, char *);
+	if (!cs)
+		return (write(1, "(null)", 6));
+	n = 0;
 	while (*cs)
 	{
 		write(1, cs++, 1);

@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 14:43:47 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 22:47:31 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/31 15:34:39 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_printp(va_list args);
 int	ft_printd(va_list args);
 int	ft_printu(va_list args);
 int	ft_print_upper_x(va_list args);
-int	ft_print_upper_x(va_list args);
+int	ft_print_x(va_list args);
 int	ft_print_percent(void);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ukireyeu < ukireyeu@student.42warsaw.pl    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 20:07:26 by ukireyeu          #+#    #+#             */
-/*   Updated: 2024/03/30 22:54:37 by ukireyeu         ###   ########.fr       */
+/*   Updated: 2024/03/31 15:44:48 by ukireyeu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,17 @@ static int	ft_ulen(int d)
 
 static void	ft_d_print(int d)
 {
-	if (d <= 9 && d >= 0)
-		return (ft_putchar(d + '0'));
 	if (d < 0)
 	{
+		if (d >= -9)
+			return (ft_putchar(d * -1 + '0'));
 		ft_d_print((d / 10) * -1);
 		ft_d_print((d % 10) * -1);
 	}
 	else
 	{
+		if (d <= 9)
+			return (ft_putchar(d + '0'));
 		ft_d_print(d / 10);
 		ft_d_print(d % 10);
 	}
